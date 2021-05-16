@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'UI/categoriesScreen.dart';
+import 'UI/dishesScreen.dart';
 
 void main() {
   runApp(MyApp());
@@ -28,7 +29,11 @@ class MyApp extends StatelessWidget {
                 fontFamily: "RobotoCondensed",
                 fontWeight: FontWeight.bold)),
       ),
-      home: CategoriesScreen(),
+      initialRoute: "/",
+      routes: {
+        "/": (context) => CategoriesScreen(),
+        DishesScreen.route: (context) => DishesScreen(),
+      },
     );
   }
 }

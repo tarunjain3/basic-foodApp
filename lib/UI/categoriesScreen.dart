@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shoping_app/UI/categoryItem.dart';
+import 'package:shoping_app/UI/widgets/categoryItem.dart';
 import 'package:shoping_app/data/categoriesData.dart';
 
 class CategoriesScreen extends StatelessWidget {
@@ -7,7 +7,7 @@ class CategoriesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(
+        title: const Center(
           child: const Text("Delicious Food"),
         ),
       ),
@@ -18,9 +18,10 @@ class CategoriesScreen extends StatelessWidget {
           return CategpryItem(
             title: DUMMY_CATEGORIES[index].title,
             color: DUMMY_CATEGORIES[index].color,
+            id: DUMMY_CATEGORIES[index].id,
           );
         },
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           childAspectRatio: 3 / 2,
           crossAxisCount: 2,
           crossAxisSpacing: 16.0,

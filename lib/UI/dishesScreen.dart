@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shoping_app/UI/widgets/dishCardView.dart';
 import 'package:shoping_app/data/mealData.dart';
 
 class DishesScreen extends StatelessWidget {
@@ -19,7 +20,7 @@ class DishesScreen extends StatelessWidget {
       body: ListView.builder(
           itemCount: mealsList.length,
           itemBuilder: (context, index) {
-            return Text(mealsList[index].title);
+            return DishCardView(mealsList[index]);
           }),
     );
   }
